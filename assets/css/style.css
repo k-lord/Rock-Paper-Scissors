@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 10%;
+}
+
+#instructions {
+    padding-top: 3.5%;
+    color: white;
+    background-color: #C16200;
+    font-size: 2em;
+}
+
+.gameImage {
+    height: 175px;
+    width: 175px;
+}
+
+img {
+    padding-top: 0.5em;
+}
+
+
+.col {
+    text-align: center;
+}
+
