@@ -23,7 +23,6 @@ $( document ).ready(function() {
 
     });
 
-
     //function for the game logic when the user presses a button on the keyboard of either r,p, or s
     function rpsGame() {
         document.onkeyup = function () {
