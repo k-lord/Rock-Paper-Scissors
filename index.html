@@ -10,35 +10,53 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <hr>
+    <h1>ROCK PAPER SCISSORS</h1>
+   
     <div class="container">
         <div class="row" id="firstRow">
-            <div class="col"><h3 id="userNameOne">Player One</h3></div>
+            <div class="col"><span class="username" id="usernameOne">Player One</span></div>
             <div class="col"></div>
-            <div class="col"><h3 id="userNameTwo">Player Two</h3></div>
+            <div class="col"><span class="username" id="usernameTwo">Player Two</span></div>
         </div>
 
         <div class="row" id="secondRow">
-            <div class="col gameImage" id="imageOne">
-                <img src="assets/images/rock.png">
+            <div class="col gameImage">
+                <img id ="imageOne" src="assets/images/rock.png">
             </div>
 
             <div class="col" id="instructions">
                     Type R, P, or S<br>
                     to start playing.
             </div>
-            <div class="col gameImage" id="imageTwo">
-                <img src="assets/images/scissors.png">
+            <div class="col gameImage">
+                <img id="imageTwo" src="assets/images/scissors.png">
             </div>
         </div>
 
         <div class="row" id="thirdRow">
-            <div class="col"><span id="letterPlayedOne"></span></div>
+            <div class="col"><span class="letterPlayed" id="letterPlayedOne">ROCK</span></div>
             <div class="col"><h2 id="results"></h2></div>
-            <div class="col"><span id="letterPlayedTwo"></span></div>
-
+            <div class="col"><span class="letterPlayed" id="letterPlayedTwo">SCISSORS</span></div>
         </div>
+
+        <div class="row" id="fourthRow">
+            <div class="col">
+                <div class="resultsTally" id="playerOneResults">
+                    <p>Wins: <span id="playerOneWins">0</span></p>
+                    <p>Ties: <span class="ties">0</span></p>
+                    <p>Losses: <span id="playerOneLosses">0</span></p>
+                </div>
+            </div>
+
+            <div class="col"><h2 id="results"></h2></div>
+
+            <div class="col">
+                <div class="resultsTally" id="playerOneResults">
+                    <p>Wins: <span id="playerTwoWins">0</span></p>
+                    <p>Ties: <span class="ties">0</span></p>
+                    <p>Losses: <span id="playerTwoLosses">0</span></p>
+                </div>
+            </div>
     </div>
 
 
@@ -46,7 +64,7 @@
 
 
 
-    <script type="text/javascript" href="assets/js/logic.js"></script>
+    <script type="text/javascript" src="assets/js/logic.js"></script>
     
 </body>
 </html>
