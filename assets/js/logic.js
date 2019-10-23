@@ -45,21 +45,27 @@ $( document ).ready(function() {
         //game logic
         if (playerOne === "r" || playerOne === "p" || playerOne === "s"){
 
-            //if user presses r -----------------------------------------------------------------------
-            if((playerOne === "r") && (computerGuess === "r")){
+            //if user ties with computer --------------------------------------------------------------
+            if(playerOne === computerGuess) {
                 ties++;
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $(".ties").text(ties);
-                $("#results").text("YOU TIED!")
+                $("#results").text("YOU TIED!");
+            }
+            
+            //if user presses r -----------------------------------------------------------------------
+            if((playerOne === "r") && (computerGuess === "r")){
+                clearTimeout();
                 $("#letterPlayedOne").text("ROCK");
                 $("#imageOne").attr("src","assets/images/rock2.png");
                 $("#letterPlayedTwo").text("ROCK");
                 $("#imageTwo").attr("src","assets/images/rock2.png");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="r") && (computerGuess=="s")){
                 playerOneWins++;
                 playerTwoLosses++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneWins").text(playerOneWins);
                 $("#playerTwoLosses").text(playerTwoLosses);
@@ -68,11 +74,12 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/rock2.png");
                 $("#letterPlayedTwo").text("SCISSORS");
                 $("#imageTwo").attr("src","assets/images/scissor2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="r") && (computerGuess=="p")){
                 playerOneLosses++;
                 playerTwoWins++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneLosses").text(playerOneLosses);
                 $("#playerTwoWins").text(playerTwoWins);
@@ -81,23 +88,21 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/rock2.png");
                 $("#letterPlayedTwo").text("PAPER");
                 $("#imageTwo").attr("src","assets/images/paper2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             //if user presses s -----------------------------------------------------------------------
             if((playerOne === "s") && (computerGuess === "s")){
-                ties++;
-                $("#instructions").text("Type R, P, or S to continue playing.");
-                $(".ties").text(ties);
-                $("#results").text("YOU TIED!")
+                clearTimeout();
                 $("#letterPlayedOne").text("SCISSORS");
                 $("#imageOne").attr("src","assets/images/scissor2.jpg");
                 $("#letterPlayedTwo").text("SCISSORS");
                 $("#imageTwo").attr("src","assets/images/scissor2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="s") && (computerGuess=="p")){
                 playerOneWins++;
                 playerTwoLosses++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneWins").text(playerOneWins);
                 $("#playerTwoLosses").text(playerTwoLosses);
@@ -106,11 +111,12 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/scissor2.jpg");
                 $("#letterPlayedTwo").text("PAPER");
                 $("#imageTwo").attr("src","assets/images/paper2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="s") && (computerGuess=="r")){
                 playerOneLosses++;
                 playerTwoWins++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneLosses").text(playerOneLosses);
                 $("#playerTwoWins").text(playerTwoWins);
@@ -119,23 +125,21 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/scissor2.jpg");
                 $("#letterPlayedTwo").text("ROCK");
                 $("#imageTwo").attr("src","assets/images/rock2.png");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             //if user presses p -----------------------------------------------------------------------
             if((playerOne === "p") && (computerGuess === "p")){
-                ties++;
-                $("#instructions").text("Type R, P, or S to continue playing.");
-                $(".ties").text(ties);
-                $("#results").text("YOU TIED!")
+                clearTimeout();
                 $("#letterPlayedOne").text("PAPER");
                 $("#imageOne").attr("src","assets/images/paper2.jpg");
                 $("#letterPlayedTwo").text("PAPER");
                 $("#imageTwo").attr("src","assets/images/paper2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="p") && (computerGuess=="r")){
                 playerOneWins++;
                 playerTwoLosses++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneWins").text(playerOneWins);
                 $("#playerTwoLosses").text(playerTwoLosses);
@@ -144,11 +148,12 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/paper2.jpg");
                 $("#letterPlayedTwo").text("ROCK");
                 $("#imageTwo").attr("src","assets/images/rock2.png");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
             if((playerOne =="p") && (computerGuess=="s")){
                 playerOneLosses++;
                 playerTwoWins++;
+                clearTimeout();
                 $("#instructions").text("Type R, P, or S to continue playing.");
                 $("#playerOneLosses").text(playerOneLosses);
                 $("#playerTwoWins").text(playerTwoWins);
@@ -157,7 +162,7 @@ $( document ).ready(function() {
                 $("#imageOne").attr("src","assets/images/paper2.jpg");
                 $("#letterPlayedTwo").text("SCISSORS");
                 $("#imageTwo").attr("src","assets/images/scissor2.jpg");
-                setTimeout(resetImage, 5000);
+                setTimeout(resetImage, 10000);
             }
         //ignore if user hits the enter button to fix bug if user hits enter instead of clicks submit button in initial start of game
         } else if ((event.keyCode == 13)) {

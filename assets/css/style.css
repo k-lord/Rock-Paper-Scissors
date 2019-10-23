@@ -89,6 +89,8 @@ img {
 
 .form-inline {
     justify-content: center;
+    position: relative;
+    bottom: -1.75em;
 }
 
 .letterPlayed {
@@ -109,5 +111,6 @@ img {
 
 .resultsTally {
     display: none;
+    margin-bottom: 0.5em;
 }
 
