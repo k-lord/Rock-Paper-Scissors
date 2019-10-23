@@ -4,54 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lekton|Press+Start+2P|VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>ROCK PAPER SCISSORS</title>
 </head>
 <body>
     <h1>ROCK PAPER SCISSORS</h1>
    
     <div class="container">
         <div class="row" id="firstRow">
+            <!--player one's username is shown-->
             <div class="col"><span class="username" id="usernameOne">Player One</span></div>
-            <div class="col"></div>
+           
+            <!--username input field to start game-->
+            <div class="col">
+                    <form class="form-inline">
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                        <div class="input-group mb-2 mr-sm-2 userInput">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                        </div>
+                    
+                        <button type="submit" class="btn btn-warning mb-2" id="userNameSubmit">Submit</button>
+                     </form>
+            </div>
+            <!--player two's username is shown-->
             <div class="col"><span class="username" id="usernameTwo">Player Two</span></div>
         </div>
 
         <div class="row" id="secondRow">
+            <!--div to hold image that changes based on player one's input-->
             <div class="col gameImage">
-                <img id ="imageOne" src="assets/images/rock.png">
+                <img class="image" id ="imageOne" src="assets/images/giphyrps.gif">
             </div>
 
+            <!--div to hold instructions on how to play game-->
             <div class="col" id="instructions">
-                    Type R, P, or S<br>
+                    Enter a Username<br>
                     to start playing.
             </div>
+
+            <!--div to hold image that changes based on player two's input-->
             <div class="col gameImage">
-                <img id="imageTwo" src="assets/images/scissors.png">
+                <img class="image" id="imageTwo" src="assets/images/giphyrps.gif">
             </div>
         </div>
 
         <div class="row" id="thirdRow">
-            <div class="col"><span class="letterPlayed" id="letterPlayedOne">ROCK</span></div>
-            <div class="col"><h2 id="results"></h2></div>
-            <div class="col"><span class="letterPlayed" id="letterPlayedTwo">SCISSORS</span></div>
+            <!--div to show which letter player one played between r,p, or s-->
+            <div class="col"><span class="letterPlayed" id="letterPlayedOne"></span></div>
+
+            <!--empty div for grid formatting purposes-->
+            <div class="col"></div>
+
+            <!--div to show which letter player two played between r,p, or s-->
+            <div class="col"><span class="letterPlayed" id="letterPlayedTwo"></span></div>
         </div>
 
         <div class="row" id="fourthRow">
+            <!--div that shows player one's scoreboard-->
             <div class="col">
                 <div class="resultsTally" id="playerOneResults">
+                    <h4 class="scoreboard">SCOREBOARD</h4>
                     <p>Wins: <span id="playerOneWins">0</span></p>
                     <p>Ties: <span class="ties">0</span></p>
                     <p>Losses: <span id="playerOneLosses">0</span></p>
                 </div>
             </div>
 
+            <!--empty div that will announce if you win, tie, or lose based on game results-->
             <div class="col"><h2 id="results"></h2></div>
 
+            <!--div that shows player two's scoreboard-->
             <div class="col">
                 <div class="resultsTally" id="playerOneResults">
+                    <h4 class="scoreboard">SCOREBOARD</h4>
                     <p>Wins: <span id="playerTwoWins">0</span></p>
                     <p>Ties: <span class="ties">0</span></p>
                     <p>Losses: <span id="playerTwoLosses">0</span></p>
@@ -59,11 +90,7 @@
             </div>
     </div>
 
-
-
-
-
-
+    <!--link to logic.js file-->
     <script type="text/javascript" src="assets/js/logic.js"></script>
     
 </body>
